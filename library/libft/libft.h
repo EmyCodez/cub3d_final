@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 10:11:36 by esimpson          #+#    #+#             */
-/*   Updated: 2024/11/09 15:31:23 by esimpson         ###   ########.fr       */
+/*   Updated: 2024/11/13 00:05:15 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,5 +97,7 @@ int					ft_strrncmp(const char *s1, const char *s2, size_t n);
 
 /* Returns number of matching chars in a string */
 int					ft_countchar(char *s, char c);
+
+char				*ft_strncpy(char *dest, const char *src, size_t n);
 
 #endif

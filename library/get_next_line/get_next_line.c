@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 15:05:52 by adhil             #+#    #+#             */
-/*   Updated: 2024/10/22 12:57:18 by esimpson         ###   ########.fr       */
+/*   Updated: 2024/11/13 00:08:55 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,9 +111,9 @@ char	*finalize_the_output_for_so_long(char *str)
 
 char	*get_next_line(int fd)
 {
-	static char *remaining;
-	char *return_line;
-	char *finalize;
+	static char	*remaining;
+	char		*return_line;
+	char		*finalize;
 
 	if (fd < 0 || BUFFER_SIZE < 1 || BUFFER_SIZE > INT_MAX)
 		return (0);

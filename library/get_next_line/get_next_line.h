@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 15:42:08 by adhil             #+#    #+#             */
-/*   Updated: 2024/10/22 13:15:15 by esimpson         ###   ########.fr       */
+/*   Updated: 2024/11/13 00:09:08 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,5 @@ char	*finalize_the_output_for_so_long(char *str);
 char	*ft_strjoin_g(char *s1, char *s2);
 size_t	ftstrleng(const char *s);
 char	*ft_strchr_g(const char *s, int c);
-
 
 #endif

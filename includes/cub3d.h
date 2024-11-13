@@ -6,7 +6,7 @@
 /*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 13:08:07 by esimpson          #+#    #+#             */
-/*   Updated: 2024/11/12 18:39:32 by esimpson         ###   ########.fr       */
+/*   Updated: 2024/11/13 10:02:10 by esimpson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,7 +148,9 @@ typedef struct s_data
 /*                              FILENAME: parse.c                             */
 /* ************************************************************************** */
 
+void			print_map(t_map *map);
 void			parse_input(char *path, t_map *map);
+int				map_checks(t_map *map);
 
 /* ************************************************************************** */
 /*                              FILENAME: struct_init.c                       */
@@ -182,14 +184,32 @@ int				validate_color(char *path, t_map *map);
 int				map_validator(char *path, t_map *map);
 
 /* ************************************************************************** */
-/*                              FILENAME: map_checks                          */
+/*                              FILENAME: map_validator2.c                    */
 /* ************************************************************************** */
 
-int				map_checks(t_map *map);
+int				is_map_line(char *line);
+void			free_map_data(t_map *map, int line_count);
 
+/* ************************************************************************** */
+/*                              FILENAME: map_checks.c                        */
+/* ************************************************************************** */
+
+char			*ft_strncpy(char *dest, const char *src, size_t n);
+void			create_border_row(char **row, int width);
+void			create_padded_row(char **new_row, char *old_row, int width);
+void			free_old_map(t_map *map);
+int				check_valid_characters(t_map *map);
+int				check_player_position(t_map *map);
 int				validate_and_replace_spaces(t_map *map);
 
-void			print_map(t_map *map);
+/* ************************************************************************** */
+/*                              FILENAME: map_checks2.c                       */
+/* ************************************************************************** */
+
+int				check_line_lengths(t_map *map);
+int				validate_map_structure(t_map *map);
+void			make_map_square(t_map *map);
+int				check_walls(t_map *map);
 
 /* ************************************************************************** */
 /*                              FILENAME: init_data.c                         */
@@ -233,7 +253,7 @@ void			move_left(t_data *data);
 void			move_right(t_data *data);
 
 /* ************************************************************************** */
-/*                              FILENAME: hooks.c								*/
+/*                              FILENAME: hooks.c                             */
 /* ************************************************************************** */
 int				on_keyrelease(int key, t_data *data);
 int				hook_loop(t_data *data);
@@ -246,7 +266,6 @@ int				exit_game(t_data *data);
 void			load_texture(t_data *data, t_image *image, char *path);
 void			paint_texture_line(t_data *data, t_ray *ray, t_line *line,
 					double wall_x);
-void			free_texture(t_map *map);
 
 /* ************************************************************************** */
 /*                              FILENAME: raycast.c                           */

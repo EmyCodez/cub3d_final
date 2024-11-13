@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   keys.h                                             :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 15:27:25 by esimpson          #+#    #+#             */
-/*   Updated: 2024/11/13 00:12:31 by adshafee         ###   ########.fr       */
+/*   Created: 2024/11/12 15:45:08 by adshafee          #+#    #+#             */
+/*   Updated: 2024/11/12 15:45:32 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef KEYS_H
-# define KEYS_H
+#include "libft.h"
 
-# define KEY_ESC 53
-# define KEY_W 13
-# define KEY_Q 12
-# define KEY_R 15
-# define KEY_A 0
-# define KEY_S 1
-# define KEY_D 2
-# define KEY_LEFT 123
-# define KEY_RIGHT 124
+char	*ft_strncpy(char *dest, const char *src, size_t n)
+{
+	size_t	i;
 
-#endif
+	i = 0;
+	while (src[i] != '\0' && i < n)
+	{
+		dest[i] = src[i];
+		++i;
+	}
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
+}

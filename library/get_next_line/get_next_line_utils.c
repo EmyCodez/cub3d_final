@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 16:48:24 by adhil             #+#    #+#             */
-/*   Updated: 2024/10/22 12:59:34 by esimpson         ###   ########.fr       */
+/*   Updated: 2024/11/13 00:09:35 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ size_t	ftstrleng(const char *s)
 
 char	*ft_strchr_g(const char *s, int c)
 {
-	char chr;
+	char	chr;
 
 	chr = (unsigned char)c;
 	if (!s)
