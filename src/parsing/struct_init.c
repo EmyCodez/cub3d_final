@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   struct_init.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 16:51:02 by adshafee          #+#    #+#             */
-/*   Updated: 2024/10/24 13:27:58 by esimpson         ###   ########.fr       */
+/*   Updated: 2024/11/12 23:50:40 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void	struct_initialization(t_map *map)
 {
 	map->map_data = NULL;
-	map->map_data_cpy = NULL;
 	map->player_cnt = 0;
 	map->map_width = 0;
 	map->map_height = 0;

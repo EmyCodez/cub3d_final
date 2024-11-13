@@ -3,21 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   map_validator.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adshafee <adshafee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 15:41:48 by adshafee          #+#    #+#             */
-/*   Updated: 2024/11/08 16:49:48 by esimpson         ###   ########.fr       */
+/*   Updated: 2024/11/12 23:48:52 by adshafee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/cub3d.h"
-
-int	is_map_line(char *line)
-{
-	while (*line == ' ')
-		line++;
-	return (*line == '1' || *line == '0');
-}
 
 int	count_map_lines(char *path)
 {
@@ -41,18 +34,6 @@ int	count_map_lines(char *path)
 	return (line_count);
 }
 
-void	free_map_data(t_map *map, int line_count)
-{
-	int	i;
-
-	i = 0;
-	while (i < line_count)
-	{
-		free(map->map_data[i]);
-		i++;
-	}
-}
-
 int	handle_blank_line(int *map_ended, char *line)
 {
 	if (!is_map_line(line))
@@ -62,7 +43,7 @@ int	handle_blank_line(int *map_ended, char *line)
 	}
 	else if (*map_ended)
 	{
-		ft_printf(RED "Error\n" RESET "Unexpected blank line(s) after map data\n");
+		ft_printf(RED "Error\n" RESET "Unexpected blank line(s) after map\n");
 		return (1);
 	}
 	return (0);

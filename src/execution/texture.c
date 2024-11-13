@@ -6,7 +6,7 @@
 /*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:24:56 by esimpson          #+#    #+#             */
-/*   Updated: 2024/11/12 18:45:22 by esimpson         ###   ########.fr       */
+/*   Updated: 2024/11/13 10:03:45 by esimpson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,15 +76,4 @@ void	load_texture(t_data *data, t_image *image, char *path)
 	}
 	image->address = mlx_get_data_addr(image->img, &image->bits_pixel,
 			&image->line_length, &image->endian);
-}
-void	free_texture(t_map *map)
-{
-	if (map->no_texture_path)
-		ft_free_ptr((void **)&map->no_texture_path);
-	if (map->so_texture_path)
-		ft_free_ptr((void **)&map->so_texture_path);
-	if (map->ea_texture_path)
-		ft_free_ptr((void **)&map->ea_texture_path);
-	if (map->we_texture_path)
-		ft_free_ptr((void **)&map->we_texture_path);
 }

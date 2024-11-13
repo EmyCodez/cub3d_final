@@ -6,7 +6,7 @@
 /*   By: esimpson <esimpson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:08:18 by esimpson          #+#    #+#             */
-/*   Updated: 2024/11/12 18:46:21 by esimpson         ###   ########.fr       */
+/*   Updated: 2024/11/13 10:02:55 by esimpson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,6 @@ int	exit_game(t_data *data)
 {
 	if (data->map.map_data)
 		ft_free_2d_array(&data->map.map_data);
-	free_texture(&data->map);
 	ft_free_ptr((void **)&data->map);
 	if (data->win_img.img)
 		mlx_destroy_image(data->mlx_ptr, data->win_img.img);
